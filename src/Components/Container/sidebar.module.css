@@ -1,0 +1,35 @@
+.sidebar{
+    max-width: 300px;
+    border-right: 1px solid #e2e8f0;
+    height:700px;   
+}
+
+.search{
+    margin-top: 10px;
+    margin-left: 10px;
+    max-width: 80%;
+    padding: 12px 12px 12px 42px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    background-color: #f7f8f6;
+    font-size: 0.95rem;
+    color: #2d3748;
+}
+
+.sidebarMeta{
+  padding: 4px 10px 8px 16px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #718096;
+
+}
+
+.sidebarEmpty{
+  padding:0px 13px 0px 0px;
+  text-align: left;
+  color: #718096;
+  font-size: 0.9rem;
+  line-height: 1.5;
+
+}
