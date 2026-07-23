@@ -1,0 +1,34 @@
+.detailicon{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #e6f4ea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  color:#1b7a5a;
+}
+
+.detailsempty{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    text-align: center;
+    color: #718096;
+}
+
+.detailsempty h2{
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #1a202c;
+    margin-bottom: 10px;
+}
+
+.detailsempty p{
+    font-size: 0.95rem;
+    max-width: 320px;
+    line-height: 1.5;
+}
