@@ -32,3 +32,12 @@
     max-width: 320px;
     line-height: 1.5;
 }
+
+.detailpane{
+  flex: 1;
+  background-color: #f5f6f4;
+  overflow-y: auto;
+  padding: 32px 48px;
+  display: flex;
+  flex-direction: column;
+}

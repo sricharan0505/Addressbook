@@ -1,0 +1,201 @@
+.modaloverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(1px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+
+}
+.modaloverlay.open{
+  display:flex;
+}
+
+.modalcontainer {
+  background-color: #ffffff;
+  border-radius: 12px;
+  max-width: 580px;
+  overflow: hidden;
+  transform: translateY(2px);
+}
+
+.modalheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 24px;
+  margin:0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.modaltitle {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #1a202c;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;;
+
+}
+
+.modalclosebtn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #718096;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background-color 0.15s ease;
+}
+
+.modalclosebtn:hover {
+  background-color: #f3f4f6;
+  color: #1a202c;
+}
+
+.modalform {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding:24px;
+}
+
+.formrowthree {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  gap: 12px;
+}
+
+.formrowtwo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.formgroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  
+}
+
+.formlabel {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #4a5568;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;;
+
+}
+
+.formlabel span {
+  color: #de350b;
+  margin-left: 2px;
+}
+
+.forminput, .formtextarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.95rem;
+  color: #2d3748;
+  background-color: #f9fafb;
+  outline: none;
+  transition: all 0.55s ease;
+  box-sizing: border-box;
+
+  
+}
+
+.forminput::placeholder, .formtextarea::placeholder {
+  color: #a0aec0;
+}
+
+.forminput:focus, .formtextarea:focus {
+  border-color: #1b7a5a;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(27, 122, 90, 0.1);
+}
+
+.formtextarea {
+  min-height: 80px;
+}
+
+.fielderrortext {
+  font-size: 0.78rem;
+  color: #d94723;
+  margin-top: 1px;
+  font-weight: 500;
+}
+
+.formvalidationalert {
+  display: none;
+  background-color: #fce8e6;
+  color: #c5221f;
+  padding: 12px 16px;
+  border-radius: 6px;
+  border: 1px solid #fca5a5;
+  margin: 0 24px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.btnsecondary {
+  background-color: #ffffff;
+  color: #2d3748;
+  border: 1px solid #d1d5db;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.15s ease;
+  justify-content: center;
+}
+
+.btnsecondary:hover {
+  background-color: #f9fafb;
+  border-color: #c0c4cc;
+}
+
+.btnprimary {
+  background-color: #1b7a5a;
+  color: #ffffff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+
+  
+}
+
+.btnprimary:hover {
+  background-color: #156247;
+}
+
+.btnprimary:active {
+  transform: scale(0.98);
+}
+
+.modalfooter {
+    display: flex;
+    justify-content: flex-end; 
+    gap: 12px;                 
+    padding: 20px 24px;
+    border-top: 1px solid #e2e8f0;
+}
