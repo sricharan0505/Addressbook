@@ -1,6 +1,6 @@
 import Header from "./Components/Header/Header"
-import Sidebar from "./Components/Container/Sidebar"
-import Detailpane from "./Components/Container/Detailpane"
+// import Sidebar from "./Components/Container/Sidebar"
+// import Detailpane from "./Components/Container/Detailpane"
 import Layout from "./Components/Container/Layout"
 import Modal from "./Components/Popup/Modal"
 import AddContact from "./AddContact"
@@ -10,7 +10,10 @@ import { useEffect } from "react"
 
 
 function App() {
-   const [selectedContact, setSelectedContact] = useState(null);
+    const [selectedContact, setSelectedContact] = useState(null);
+    const [showModal, setShowModal] = useState(false);
+    const [editingContact,setEditingContact]=useState(null);
+    const [searchTerm, setSearchTerm] = useState("");
 
     const [contacts, setContacts] = useState(()=>{
       const savedContacts = localStorage.getItem("contacts");
@@ -21,42 +24,40 @@ function App() {
       setSelectedContact(contacts[0])
     }},[contacts, selectedContact])
 
-    const [showModal, setShowModal] = useState(false);
-    const [editingContact,setEditingContact]=useState(null);
-    const [searchTerm, setSearchTerm] = useState("");
+
 
     const addContact = (contact) => {
-        setContacts(prev => [...prev, contact]);
+        setContacts(c => [...c, contact]);
         setSelectedContact(contact);
         setShowModal(false);
     };
 
-const deleteContact = (id) => {
-    const updatedContacts = contacts.filter(
-        contact => contact.id !== id
-    );
+    const deleteContact = (id) => {
+        const updatedContacts = contacts.filter(
+            contact => contact.id !== id
+        );
 
-    setContacts(updatedContacts);
+        setContacts(updatedContacts);
 
-    if (updatedContacts.length > 0) {
-        setSelectedContact(updatedContacts[0]);
-    } else {
-        setSelectedContact(null);
-    }
-};
+        if (updatedContacts.length > 0) {
+            setSelectedContact(updatedContacts[0]);
+        } else {
+            setSelectedContact(null);
+        }
+    };
 
-const updateContact = (updatedContact) => {
-    const updatedContacts = contacts.map(contact =>
-        contact.id === updatedContact.id
+    const updateContact = (updatedContact) => {
+        const updatedContacts = contacts.map(contact =>
+            contact.id === updatedContact.id
             ? updatedContact
             : contact
-    );
+        );
 
-    setContacts(updatedContacts);
-    setSelectedContact(updatedContact);
-    setShowModal(false);
-    setEditingContact(null);
-};
+        setContacts(updatedContacts);
+        setSelectedContact(updatedContact);
+        setShowModal(false);
+        setEditingContact(null);
+    };
 
     return (
         <>
